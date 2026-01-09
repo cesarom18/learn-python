@@ -13,7 +13,7 @@ the code in this order, first compile our code and transform it in bytecode, sec
 last the result of PVM is transformed to machine language.
 """
 
-# Basic Operators
+# -= Basic Operators =-
 add = 1 + 1 # Add two numbers
 sub = 1 - 1 # Substract two numbers
 mul = 1 * 1 # Multiply two numbers
