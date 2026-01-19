@@ -6,6 +6,13 @@ we can refer to
 
 - Argument: It is the value that we pass to the function
 parameter
+
+- Variable Scope: When we create a variable with the same name
+in two differents functions this variables are totally different.
+Of course, if we try to access to them outside of function scope
+we will get a execution error because we can access, the only way
+to access them is to declare a global function with the "global"
+statement.
 """
 
 # -= Functions =-
