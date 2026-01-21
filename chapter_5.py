@@ -19,3 +19,11 @@ first_element, *others = example_list_two # Unpack elements from list
 print(enumerate(example_list)) # Create a list with tuples, each tuple has index and respective value
 print(example_list.index(1)) # Find a element and return his index (First ocurrency), otherwise return error
 print(example_list.count(1)) # Count how many time a element is in the list
+print(example_list.insert(1, 1)) # Insert a element into list in the specified index (Move all elements one index up)
+print(example_list.append(2)) # Add a element at the end of list
+print(example_list.remove(1)) # Delete first ocurrency element of the list
+print(example_list.pop()) # Delete the last element of the list if we dont give a specific index
+del example_list[0] # Delete a specific element by index
+print(example_list.clear()) # Clear all list
+print(example_list.sort()) # Sort all elements
+print(sorted(example_list)) # Return sorted list
