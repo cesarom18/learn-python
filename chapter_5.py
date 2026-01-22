@@ -37,3 +37,7 @@ print(example_list.sort(key=lambda el:el[0])) # Declare and use lambda (Params:R
 # -= Compression List =-
 example_compression = [element * 2 for element in example_list] # Element Return/Element/Iterable
 example_compression_two = [element for element in example_list if element > 0] # Comression list with condition
+
+# -= Map / Filter =-
+example_map = list(map(lambda element: element *2, example_list)) # Use map(function, iterable)
+example_filter = list(filter(lambda element: element > 0, example_list)) # Use filter(function, iterable)
