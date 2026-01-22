@@ -4,6 +4,9 @@
 - List: Is a data structure where we can save any data type.
 
 - Tuple: Is a data structure where we can save only one data type.
+
+- When use lambda functions?: When the function or the proccess is needed
+one time, if the action is needed more than one time is better to use a function.
 """
 
 # -= List =-
@@ -27,3 +30,6 @@ del example_list[0] # Delete a specific element by index
 print(example_list.clear()) # Clear all list
 print(example_list.sort()) # Sort all elements
 print(sorted(example_list)) # Return sorted list
+
+# -= Lambda Expresions =-
+print(example_list.sort(key=lambda el:el[0])) # Declare and use lambda (Params:Return)
