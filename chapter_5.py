@@ -33,3 +33,7 @@ print(sorted(example_list)) # Return sorted list
 
 # -= Lambda Expresions =-
 print(example_list.sort(key=lambda el:el[0])) # Declare and use lambda (Params:Return)
+
+# -= Compression List =-
+example_compression = [element * 2 for element in example_list] # Element Return/Element/Iterable
+example_compression_two = [element for element in example_list if element > 0] # Comression list with condition
