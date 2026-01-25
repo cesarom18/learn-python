@@ -1,9 +1,9 @@
 """
 -= Definitions / Concepts =-
 
-- List: Is a data structure where we can save any data type.
+- List: Is a data structure where we can save any data type and modify them.
 
-- Tuple: Is a data structure where we can save only one data type.
+- Tuple: Is a data structure where we can't modify the saved values.
 
 - When use lambda functions?: When the function or the proccess is needed
 one time, if the action is needed more than one time is better to use a function.
@@ -41,3 +41,8 @@ example_compression_two = [element for element in example_list if element > 0] #
 # -= Map / Filter =-
 example_map = list(map(lambda element: element *2, example_list)) # Use map(function, iterable)
 example_filter = list(filter(lambda element: element > 0, example_list)) # Use filter(function, iterable)
+
+# -= Tuples =-
+example_tuple = (1, 2, "example") # Declare tuple
+joining_tuple = example_tuple + (3, 4) # Join tuples
+example_tuple_two = tuple([1, 2]) # Create a tuple based on a iterable element
