@@ -5,6 +5,9 @@
 
 - Tuple: Is a data structure where we can't modify the saved values.
 
+- Set: Is a data conexion that cannot be repeated and is not oredered. Also
+we cannot access to the elements inside but we can ask if the element is there.
+
 - When use lambda functions?: When the function or the proccess is needed
 one time, if the action is needed more than one time is better to use a function.
 """
@@ -46,3 +49,13 @@ example_filter = list(filter(lambda element: element > 0, example_list)) # Use f
 example_tuple = (1, 2, "example") # Declare tuple
 joining_tuple = example_tuple + (3, 4) # Join tuples
 example_tuple_two = tuple([1, 2]) # Create a tuple based on a iterable element
+
+# -= Sets -=
+example_set = {1, 2, 3} # Declare set
+print(example_set.add(4)) # Add a element
+print(example_set.remove(1)) # Remove a element (Based on element, not index)
+example_set_two = set(example_tuple) # Create a set based on a iterable element
+print(example_set | example_set_two) # Join two sets (Union operator)
+print(example_set & example_set_two) # Intersect two sets (Only keeps shared elements)
+print(example_set - example_set_two) # Create a set with left set differences (Difference operator)
+print(example_set ^ example_set_two) # Create a set with no shared elements (Symmetrical difference operator)
