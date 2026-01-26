@@ -5,8 +5,10 @@
 
 - Tuple: Is a data structure where we can't modify the saved values.
 
-- Set: Is a data conexion that cannot be repeated and is not oredered. Also
+- Set: Is a data connection that cannot be repeated and is not oredered. Also
 we cannot access to the elements inside but we can ask if the element is there.
+
+- Dictionary: Is a data connection that is stored with key/value structure.
 
 - When use lambda functions?: When the function or the proccess is needed
 one time, if the action is needed more than one time is better to use a function.
@@ -59,3 +61,14 @@ print(example_set | example_set_two) # Join two sets (Union operator)
 print(example_set & example_set_two) # Intersect two sets (Only keeps shared elements)
 print(example_set - example_set_two) # Create a set with left set differences (Difference operator)
 print(example_set ^ example_set_two) # Create a set with no shared elements (Symmetrical difference operator)
+
+# -= Dictionaries =-
+example_dict = { # Declare dict
+    "a": 1,
+    "b": 2
+}
+print(example_dict[["a"]]) # Access to a value by key (This can give us a error if the key does not exists)
+print(example_dict.get("a")) # Access to a valye by key (If key does not exists return None)
+example_dict["c"] = 3 # Add key/value
+del(example_dict["c"]) # Delete element
+print(example_dict.items()) # Get key/value pair in tuples
