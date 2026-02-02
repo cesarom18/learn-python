@@ -72,3 +72,8 @@ print(example_dict.get("a")) # Access to a valye by key (If key does not exists 
 example_dict["c"] = 3 # Add key/value
 del(example_dict["c"]) # Delete element
 print(example_dict.items()) # Get key/value pair in tuples
+
+# -= Unpacking Operator =-
+print(*example_list) # Use unpacking operator (Extract all elements from list/tuple)
+print([*example_list, *example_list_two]) # Create new list with unpacking operator
+print({**example_dict, **example_dict}) # Create new dict with unpacking operator
