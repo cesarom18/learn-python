@@ -12,7 +12,13 @@ we cannot access to the elements inside but we can ask if the element is there.
 
 - When use lambda functions?: When the function or the proccess is needed
 one time, if the action is needed more than one time is better to use a function.
+
+- Row: Is a data structure that use FIFO statement (First in first out), that means that
+we take first element and operate with it, after that the same with the second one and so
+on up to N elements.
 """
+
+from collections import deque
 
 # -= List =-
 example_list = [1 ,2] # Declare list
@@ -77,3 +83,8 @@ print(example_dict.items()) # Get key/value pair in tuples
 print(*example_list) # Use unpacking operator (Extract all elements from list/tuple)
 print([*example_list, *example_list_two]) # Create new list with unpacking operator
 print({**example_dict, **example_dict}) # Create new dict with unpacking operator
+
+# -= Rows =-
+row = deque([1, 2, 3]) # Create a row with deque
+print(row.append(4)) # Add element to row
+print(row.popleft()) # Remove respective element
