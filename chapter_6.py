@@ -13,12 +13,13 @@ to a variable and this brings all methods/properties that we delcare inside the 
 
 - self: Is a reserved word that refer to object himself, that means every instance have a
 different "self" to make every object unique in terms of memory location and logic of course.
+In simple words is the same "variable" that we bring the class at the beginning.
 """
 
 # Create class
 class Car:
     def __init__(self, brand): # Create constructor
-        pass
+        self.brand = brand # Declare class propertie
 
     def turn_on(self): # Declare method
         print("Car turned on")
