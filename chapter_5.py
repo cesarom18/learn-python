@@ -63,7 +63,7 @@ joining_tuple = example_tuple + (3, 4) # Join tuples
 example_tuple_two = tuple([1, 2]) # Create a tuple based on a iterable element
 
 # -= Sets -=
-example_set = {1, 2, 3} # Declare set
+example_set = {1, 2, 3}
 print(example_set.add(4)) # Add a element
 print(example_set.remove(1)) # Remove a element (Based on element, not index)
 example_set_two = set(example_tuple) # Create a set based on a iterable element
