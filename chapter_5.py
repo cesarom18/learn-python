@@ -16,6 +16,10 @@ one time, if the action is needed more than one time is better to use a function
 - Row: Is a data structure that use FIFO statement (First in first out), that means that
 we take first element and operate with it, after that the same with the second one and so
 on up to N elements.
+
+- Stack: Is a data structure that use LIFO statement (Last in first out), that means that we take
+last element and operate with it, after that the same with de previous element and so on up to
+N elements.
 """
 
 from collections import deque
@@ -88,3 +92,8 @@ print({**example_dict, **example_dict}) # Create new dict with unpacking operato
 row = deque([1, 2, 3]) # Create a row with deque
 print(row.append(4)) # Add element to row
 print(row.popleft()) # Remove respective element
+
+# -= Stack (Is a list but with stack logic [LIFO])=-
+stack = [1, 2, 3] # Declare stack/list
+print(stack.pop()) # Remove respective element
+print(stack.append(3)) # Add respective element
