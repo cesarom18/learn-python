@@ -23,19 +23,35 @@ everytime the instance properties for the constructor.
 
 - Private Properties: This properties can only be accessed within class or
 method, not from outside.
+
+- @property: Is a decorator that transform method to a class propertie, this is
+useful to implement logic inside and validate some rules to set a specific propertie.
+Python creates a property with the same name of the method, this property now has "fget" (Getter),
+"fset" (Setter) and "fdel" (Deleter), so inside of the class create a "property object" that has all this
+stuff where we can set all this methods mentioned before.
 """
 
 # Create class
 class Car:
     country = "USA" # Declare class propertie
 
-    def __init__(self, brand, n_wheels): # Create constructor
-        self.brand = brand # Declare instance propertie
+    def __init__(self, brand, color ,n_wheels): # Create constructor
+        self.brand = (brand) # Declare instance propertie
+        self.color = color # Declare instance propertie
         self.__n_wheels = n_wheels # Declare private propertie (Only accessible inside of the class or method)
+
+    @property # Set property (Getter)
+    def brand(self):
+        return self.__brand
+    
+    @brand.setter
+    def brand(self, brand):
+        if brand.strip():
+            self.__brand = brand
 
     @classmethod
     def factory(cls): # Declare factory method
-        return cls("Chevrolet", 4)
+        return cls("Chevrolet", "Red", 4)
     
     @classmethod
     def turn_on(cls): # Declare class method
@@ -47,7 +63,7 @@ class Car:
     def __example_private(self): # Declare private method
         print(f"Private: {self.__n_wheels}") # Access to private propertie
 
-my_car = Car("Toyota", 4) # Create object/instance class
+my_car = Car("Toyota", "Red", 4) # Create object/instance class
 my_car.open_door() # Call instance method
 print(isinstance(my_car, Car)) # Check if object is a instance of the class (Return boolean)
 print(my_car.brand) # Get instance propertie value
