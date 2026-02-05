@@ -29,16 +29,21 @@ useful to implement logic inside and validate some rules to set a specific prope
 Python creates a property with the same name of the method, this property now has "fget" (Getter),
 "fset" (Setter) and "fdel" (Deleter), so inside of the class create a "property object" that has all this
 stuff where we can set all this methods mentioned before.
+
+- "Magic Method"?: Is a method that will be executed indirectly.
 """
 
 # Create class
 class Car:
     country = "USA" # Declare class propertie
 
-    def __init__(self, brand, color ,n_wheels): # Create constructor
+    def __init__(self, brand, color ,n_wheels): # Create constructor (Magic method)
         self.brand = (brand) # Declare instance propertie
         self.color = color # Declare instance propertie
         self.__n_wheels = n_wheels # Declare private propertie (Only accessible inside of the class or method)
+
+    def __del__(self): # Call destructor (When instance get eliminated)
+        print("Auto eliminado")
 
     @property # Set property (Getter)
     def brand(self):
@@ -71,3 +76,4 @@ print(Car.country, my_car.country) # Get class propertie value (From class and f
 Car.turn_on() # Call class method
 factory_car = Car.factory() # Create a instance with factory method
 print(my_car.__dict__) # Get all properties from instance
+del my_car # Delete instance
