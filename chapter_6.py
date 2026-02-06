@@ -33,6 +33,18 @@ stuff where we can set all this methods mentioned before.
 - "Magic Method"?: Is a method that will be executed indirectly.
 """
 
+class Concessionaire:
+    def __init__(self, name, cars):
+        self.name = name
+        self.cars = cars
+    
+    def add_car(self, car):
+        self.cars.append(car)
+    
+    def show_cars(self):
+        for car in self.cars:
+            print(car)
+
 # Create class
 class Car:
     country = "USA" # Declare class propertie
@@ -44,6 +56,9 @@ class Car:
 
     def __del__(self): # Call destructor (When instance get eliminated)
         print("Auto eliminado")
+    
+    def __str__(self): # Magic method to change how is printed a instance
+        return f"Brand: {self.brand} | Color : {self.color}"
     
     def __eq__(self, to_compare): # Magic method to known if two instances are the same in properties values
         return self.brand == to_compare.brand and self.color == to_compare.color
@@ -89,5 +104,5 @@ Car.turn_on() # Call class method
 factory_car = Car.factory() # Create a instance with factory method
 print(my_car.__dict__) # Get all properties from instance
 # del my_car # Delete instance
-my_car_two = Car("Toyota", "Red", 4)
-print(my_car == my_car_two)
+concessionaire = Concessionaire("Example", [my_car])
+concessionaire.show_cars()
