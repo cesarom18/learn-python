@@ -34,6 +34,13 @@ stuff where we can set all this methods mentioned before.
 
 - Class Container: The meaning of this concept is when class contains multiple instance from other class
 (Normally in a list), like a massive storage.
+
+- Inheritance: When we use inheritance all properties and methods will be available for the children class, and when
+we declare a multiple inheritance and we have the same named method or propertie the children class will take the last
+one declared from the fathers class (From right to left)
+
+- Overweight: This happens when we have the same method in two class (When we use inheritance of course)
+and the sub-class keeps with his own method implementation overwritting the father method class.
 """
 
 class Concessionaire:
@@ -109,3 +116,22 @@ print(my_car.__dict__) # Get all properties from instance
 # del my_car # Delete instance
 concessionaire = Concessionaire("Example", [my_car])
 concessionaire.show_cars()
+
+class Animal:
+    def __init__(self):
+        self.name = "Example"
+
+    def walk():
+        print("Animal walking")
+    
+    def jump():
+        print("Animal jumping")
+
+class Dog(Animal):
+    def __init__(self):
+        super().__init__() # Call father class constructor
+        self.something = True
+
+    def walk(): # Annulment method (Overweight)
+        super().walk() # Call father class method
+        print("Dog walking")
