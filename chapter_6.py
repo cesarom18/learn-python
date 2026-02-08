@@ -31,6 +31,9 @@ Python creates a property with the same name of the method, this property now ha
 stuff where we can set all this methods mentioned before.
 
 - "Magic Method"?: Is a method that will be executed indirectly.
+
+- Class Container: The meaning of this concept is when class contains multiple instance from other class
+(Normally in a list), like a massive storage.
 """
 
 class Concessionaire:
