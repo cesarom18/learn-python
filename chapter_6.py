@@ -46,6 +46,9 @@ and the sub-class keeps with his own method implementation overwritting the fath
 class into other class by inheritance and implement the properties and methods declarated before.
 
 - Decorator: Is a function that wraps other functions adding new rules or functionalities.
+
+- Polimorfism: It is the ability of different objects to respond differently to the same method, we have the same method
+in two different classes with the same interface (By the method in this case) and inside the implementation is different.
 """
 
 from abc import ABC, abstractmethod # Import from abc (Abstract Class Module)
