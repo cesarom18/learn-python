@@ -41,7 +41,14 @@ one declared from the fathers class (From right to left)
 
 - Overweight: This happens when we have the same method in two class (When we use inheritance of course)
 and the sub-class keeps with his own method implementation overwritting the father method class.
+
+- Abstract Class: Is a class that cannot be instanciated only inheritanced. That means we need to "implement" the abstract
+class into other class by inheritance and implement the properties and methods declarated before.
+
+- Decorator: Is a function that wraps other functions adding new rules or functionalities.
 """
+
+from abc import ABC, abstractmethod # Import from abc (Abstract Class Module)
 
 class Concessionaire:
     def __init__(self, name, cars):
@@ -62,7 +69,7 @@ class Car:
     def __init__(self, brand, color ,n_wheels): # Create constructor (Magic method)
         self.brand = brand # Declare instance propertie
         self.color = color # Declare instance propertie
-        self.__n_wheels = n_wheels # Declare private propertie (Only accessible inside of the class or method)
+        self.__n_wheels = n_wheels # Declare private propertie (Only accessible inside of the class or method) [Name Mangling]
 
     def __del__(self): # Call destructor (When instance get eliminated)
         print("Auto eliminado")
@@ -82,7 +89,7 @@ class Car:
     def __le__(self, to_compare): # Magic method to known if two instances are lower or equal than in some propertie value
         return self.__n_wheels <= to_compare.__n_wheels
 
-    @property # Set property (Getter)
+    @property # Set property (Getter) | Also this decorator makes a propertie only readable (If is not defined the setter of course)
     def brand(self):
         return self.__brand
     
@@ -135,3 +142,21 @@ class Dog(Animal):
     def walk(): # Annulment method (Overweight)
         super().walk() # Call father class method
         print("Dog walking")
+
+class AbstractClass(ABC):
+    @property
+    @abstractmethod # Use abstractmethod to make propertie required/implemented in a child class
+    def required_propertie(self):
+        pass
+
+    @abstractmethod # Use abstractmethod to make method requiered/implemented in a child class
+    def required_method(self):
+        pass
+
+class ExampleClass(AbstractClass):
+    required_propertie = "example" # Need to implement
+
+    def required_method(self): # Need to implement
+        print("example")
+
+x =ExampleClass()
