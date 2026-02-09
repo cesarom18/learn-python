@@ -165,4 +165,9 @@ class ExampleClass(AbstractClass):
     def required_method(self): # Need to implement
         print("example")
 
-x =ExampleClass()
+class ExtendedList(list): # Extend native types
+    def prepend(self, item): # Create custom method for native type
+        self.insert(0, item)
+
+extended_list = ExtendedList([1, 2]) # Use extended class
+extended_list.prepend(0) # Use custom method
