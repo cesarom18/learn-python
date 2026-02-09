@@ -49,6 +49,9 @@ class into other class by inheritance and implement the properties and methods d
 
 - Polimorfism: It is the ability of different objects to respond differently to the same method, we have the same method
 in two different classes with the same interface (By the method in this case) and inside the implementation is different.
+
+- Duck Typing: A way of programming where the type of an object is not checked, 
+but rather whether it has the methods or behaviors that are needed.
 """
 
 from abc import ABC, abstractmethod # Import from abc (Abstract Class Module)
