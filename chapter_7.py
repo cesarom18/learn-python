@@ -18,6 +18,14 @@ else: # "else" statement to execute always if there is no errors in main code fl
 finally: # "finally" statement to execute always, doesn't matter if throw error
     print("Example")
 
+class CustomException(Exception): # Extend from some exception type
+    def __init__(self, msg, code):
+        self.msg = msg
+        self.code = code
+    
+    def __str__(self):
+        return f"{self.msg} - CODE: {self.code}"
+
 def division(n=0):
     if n == 0:
         raise ZeroDivisionError("You cannot divide by 0") # Invoke exception from function
