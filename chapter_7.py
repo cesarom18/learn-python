@@ -17,3 +17,13 @@ else: # "else" statement to execute always if there is no errors in main code fl
     print("Example")
 finally: # "finally" statement to execute always, doesn't matter if throw error
     print("Example")
+
+def division(n=0):
+    if n == 0:
+        raise ZeroDivisionError("You cannot divide by 0") # Invoke exception from function
+    return 5 / n
+
+try:
+    division()
+except ZeroDivisionError as ex: # Use the invoke exception in try/expect statement
+    print(ex)
