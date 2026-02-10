@@ -10,5 +10,6 @@
 # "except" statement
 try: 
     n1 = int(input("Enter a number:"))
-except:
+except ValueError as ex: # "ValueError" is a exception type from "Exception" class
+    print(ex) # Error message
     print("Error, the input was not a number")
