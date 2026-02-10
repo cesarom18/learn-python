@@ -13,3 +13,7 @@ try:
 except ValueError as ex: # "ValueError" is a exception type from "Exception" class
     print(ex) # Error message
     print("Error, the input was not a number")
+else: # "else" statement to execute always if there is no errors in main code flow
+    print("Example")
+finally: # "finally" statement to execute always, doesn't matter if throw error
+    print("Example")
