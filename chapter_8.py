@@ -10,3 +10,6 @@ the app performance, if the module change his modify date then python will repla
 - Package: The main difference between module and package is that package is a do reference to a folder,
 to transform a folder into a package we need to create a "__init__.py" file.
 """
+import math
+
+print(dir(math)) # Use function dir (This give us some magic functions and related packages)
