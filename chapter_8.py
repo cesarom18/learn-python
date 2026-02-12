@@ -9,6 +9,10 @@ the app performance, if the module change his modify date then python will repla
 
 - Package: The main difference between module and package is that package is a do reference to a folder,
 to transform a folder into a package we need to create a "__init__.py" file.
+
+- "__main__": With this Python tell us which file is executing in the
+"main" thread, so if we execute specifically one file this will contain
+on his "__name__" the value of "__main__".
 """
 import math
 
