@@ -77,7 +77,7 @@ example_dict = { # Declare dict
     "a": 1,
     "b": 2
 }
-print(example_dict[["a"]]) # Access to a value by key (This can give us a error if the key does not exists)
+print(example_dict["a"]) # Access to a value by key (This can give us a error if the key does not exists)
 print(example_dict.get("a")) # Access to a valye by key (If key does not exists return None)
 example_dict["c"] = 3 # Add key/value
 del(example_dict["c"]) # Delete element
