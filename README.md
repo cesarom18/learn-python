@@ -5,4 +5,4 @@ seccion.
 
 # Lecturas
 - **fundamentals**: Ultimate Python 
-- **algorithms_data_estructures**: Estructuras de datos en Python
+- **algorithm_data_structures**: Estructuras de datos en Python
