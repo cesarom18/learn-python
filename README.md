@@ -1,2 +1,8 @@
 # Learn Python
-Como bien se especifica en la descripcion de este repositorio la finalidad del mismo es simplemente almacenar ciertos apuntes o practicas con el propio lenguaje. Para este proposito se tomara como referencia el libro "Ultimate Python", se organizara por los respectivos capitulos del libro con los respectivos archivos. Por ultimo no se busca trasladar 100% cada una de las palabras o definiciones que otorga el propio libro, solamente se tomaran ciertas partes que crea que son relevantes. 
+Este repositorio esta dedicado a almacenar conceptos y formas de utilizar el
+lenguaje de python, esto a traves de distintas lecturas que se especifican en la siguiente
+seccion.
+
+# Lecturas
+- **fundamentals**: Ultimate Python 
+- **algorithms_data_estructures**: Estructuras de datos en Python
